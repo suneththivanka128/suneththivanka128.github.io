@@ -2,397 +2,467 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Suneth Thiwanka | Network Engineer Intern & Full-Stack Developer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suneth Thiwanka Ubeywarna | Network Security Engineer Intern</title>
   <meta name="description"
-    content="Portfolio of Suneth Thiwanka Ubeywarna, a Network Engineer Intern and Full-Stack Developer. Specialized in Cisco networking, Spring Boot, and modern web technologies. Currently studying at SLIATE - Dehiwala." />
-  <meta name="keywords"
-    content="Suneth Thiwanka, Suneth Thivanka, S T Ubeywarna,STUbeywarna,STU,Network Engineer Intern, Full-Stack Developer, Portfolio, SLIATE Dehiwala, Cisco Certified, CCNP, CCNA, Spring Boot Developer Sri Lanka" />
-  <meta name="author" content="Suneth Thiwanka Ubeywarna" />
-  <meta name="robots" content="index, follow" />
+    content="Portfolio of Suneth Thiwanka Ubeywarna — IT undergraduate specializing in Network Security, Routing & Switching, and Full-Stack Development.">
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://suneththivanka128.github.io/" />
-  <meta property="og:title" content="Suneth Thiwanka | Network Engineer Intern & Full-Stack Developer" />
-  <meta property="og:description"
-    content="Explore the portfolio of Suneth Thiwanka, showcasing projects in network infrastructure and software development." />
-  <meta property="og:image" content="https://suneththivanka128.github.io/img01.jpg" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://suneththivanka128.github.io/" />
-  <meta property="twitter:title" content="Suneth Thiwanka | Network Engineer Intern & Full-Stack Developer" />
-  <meta property="twitter:description"
-    content="Explore the portfolio of Suneth Thiwanka, showcasing projects in network infrastructure and software development." />
-  <meta property="twitter:image" content="https://suneththivanka128.github.io/img01.jpg" />
-
-  <!-- Canonical Link -->
-  <link rel="canonical" href="https://suneththivanka128.github.io/" />
-
-  <!-- Modern Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <!-- Background Effects -->
-  <div class="bg-shape shape-1"></div>
-  <div class="bg-shape shape-2"></div>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-ring"></div>
+  </div>
 
-  <!-- Navigation -->
-  <header class="glass-nav">
-    <div class="nav-container">
-      <a href="#" class="logo">S T Ubeywarna<span>.</span></a>
-      <div class="menu-toggle" id="menu-toggle">
-        <i class="fas fa-bars"></i>
-      </div>
-      <nav class="nav-links" id="nav-links">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#expertise" class="nav-link">Expertise</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#credentials" class="nav-link">Credentials</a>
-        <a href="#contact" class="nav-link">Contact</a>
-        <button class="theme-toggle" id="theme-btn" aria-label="Toggle Theme">
-          <i class="fas fa-moon"></i>
-        </button>
+  <!-- Progress bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="brand"><span class="bracket">&lt;</span>S T <span class="accent">Ubeywarna</span><span
+          class="bracket">/&gt;</span></a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active-link" data-nav>Home</a>
+        <a href="#about" class="nav-link" data-nav>About</a>
+        <a href="#skills" class="nav-link" data-nav>Skills</a>
+        <a href="#experience" class="nav-link" data-nav>Experience</a>
+        <a href="#projects" class="nav-link" data-nav>Projects</a>
+        <a href="#certifications" class="nav-link" data-nav>Certs</a>
+        <a href="#contact" class="nav-link" data-nav>Contact</a>
       </nav>
+
+      <a href="assets/resume.pdf" class="btn btn-outline nav-cta" download>Resume</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <i class='bx bx-menu'></i>
+      </button>
     </div>
   </header>
 
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="menu-close" id="menuClose" aria-label="Close menu">
+      <i class='bx bx-x'></i>
+    </button>
+    <nav class="mobile-nav">
+      <a href="#home" data-nav-mobile>Home</a>
+      <a href="#about" data-nav-mobile>About</a>
+      <a href="#skills" data-nav-mobile>Skills</a>
+      <a href="#experience" data-nav-mobile>Experience</a>
+      <a href="#projects" data-nav-mobile>Projects</a>
+      <a href="#certifications" data-nav-mobile>Certs</a>
+      <a href="#contact" data-nav-mobile>Contact</a>
+    </nav>
+    <div class="mobile-socials">
+      <a href="https://github.com/suneththivanka128" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
+      <a href="https://linkedin.com/in/suneth-thiwanka-ubeywarna" target="_blank" rel="noopener"><i
+          class='bx bxl-linkedin-square'></i></a>
+      <a href="mailto:stubeywarna@gmail.com"><i class='bx bx-envelope'></i></a>
+    </div>
+  </div>
+
   <main>
-    <!-- Hero Section -->
-    <section id="hero" class="hero-section">
-      <div class="hero-content fade-up">
-        <div class="badge">Looking for Internships</div>
-        <h1 class="hero-title">
-          Connecting <br />
-          <span class="gradient-text">Systems & Code.</span>
-        </h1>
-        <p class="hero-subtitle">
-          Hello! I'm <strong>Suneth Thiwanka Ubeywarna</strong>, an aspiring Network Engineer and IT Student passionate
-          about both networking infrastructure and software development. Currently studying HNDIT at SLIATE - Dehiwala.
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <canvas id="netCanvas"></canvas>
+      <div class="hero-glow glow-1"></div>
+      <div class="hero-glow glow-2"></div>
+
+      <div class="hero-content container">
+        <p class="hero-overline reveal-up">Hello, I'm</p>
+        <h1 class="hero-name reveal-up" style="--d:0.1s">Suneth Thiwanka<br>Ubeywarna</h1>
+        <h2 class="hero-role reveal-up" style="--d:0.2s">
+          <span id="typedRole"></span><span class="cursor-blink">|</span>
+        </h2>
+        <p class="hero-tagline reveal-up" style="--d:0.3s">
+          IT undergraduate building a foundation across <strong>routing &amp; switching, network security,</strong> and
+          <strong>full-stack development</strong> — turning classroom theory into working systems.
         </p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#contact" class="btn btn-secondary">Contact Me</a>
-          <a href="Suneth_Thiwanka_CV.html" target="_blank" class="btn btn-secondary"><i
-              class="fas fa-file-download"></i> Download CV</a>
+
+        <div class="hero-actions reveal-up" style="--d:0.4s">
+          <a href="#projects" class="btn btn-primary">View Projects <i class='bx bx-right-arrow-alt'></i></a>
+          <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+        </div>
+
+        <div class="hero-socials reveal-up" style="--d:0.5s">
+          <a href="https://github.com/suneththivanka128" target="_blank" rel="noopener" aria-label="GitHub"><i
+              class='bx bxl-github'></i></a>
+          <a href="https://linkedin.com/in/suneth-thiwanka-ubeywarna" target="_blank" rel="noopener"
+            aria-label="LinkedIn"><i class='bx bxl-linkedin-square'></i></a>
+          <a href="mailto:stubeywarna@gmail.com" aria-label="Email"><i class='bx bx-envelope'></i></a>
+          <a href="tel:+94701891183" aria-label="Phone"><i class='bx bx-phone'></i></a>
         </div>
       </div>
-      <div class="hero-image fade-up delay-1">
-        <div class="img-wrapper glass-card">
-          <img src="img01.jpg" alt="Suneth Thiwanka Ubeywarna" />
-          <div class="glow-effect"></div>
-        </div>
-      </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Scroll down">
+        <i class='bx bx-chevron-down'></i>
+      </a>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-      <div class="section-header fade-up">
-        <h2 class="section-title">About Me</h2>
-        <div class="line"></div>
-      </div>
-      <div class="about-grid">
-        <div class="about-text fade-up">
-          <p>
-            I am a highly motivated IT undergraduate bridging the gap between traditional networking and modern software
-            development. I enjoy building robust network architectures and crafting clean, efficient code.
-          </p>
-          <p>
-            Currently, I am pursuing my <strong>Higher National Diploma in Information Technology (HNDIT)</strong> at
-            <strong>SLIATE - Dehiwala</strong>. I am actively seeking an internship opportunity where I can apply my
-            academic knowledge in networking and coding to real-world industry challenges.
-          </p>
-        </div>
-        <div class="stats-grid fade-up delay-1">
-          <div class="stat-card glass-card">
-            <h3>HNDIT</h3>
-            <p>Undergraduate</p>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <p class="section-tag reveal-up">Get To Know Me</p>
+        <h2 class="section-title reveal-up">About Me</h2>
+
+        <div class="about-grid">
+          <div class="about-photo-wrap reveal-left">
+            <div class="photo-ring"></div>
+            <img src="assets/profile.jpg" alt="Suneth Thiwanka Ubeywarna" class="about-photo">
+            <div class="badge-chip">🎓 HNDIT · 2023–Present</div>
           </div>
-          <div class="stat-card glass-card">
-            <h3>Net & Dev</h3>
-            <p>Dual Passion</p>
-          </div>
-          <div class="stat-card glass-card">
-            <h3>100%</h3>
-            <p>Ready to Learn</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Expertise / Skills Section -->
-    <section id="expertise" class="section">
-      <div class="section-header fade-up">
-        <h2 class="section-title">Expertise</h2>
-        <div class="line"></div>
-      </div>
-      <div class="expertise-grid fade-up delay-1">
-
-        <div class="expertise-card glass-card">
-          <div class="icon-wrapper"><i class="fas fa-network-wired"></i></div>
-          <h3>Networking Concepts</h3>
-          <p>Understanding of TCP/IP, Routing & Switching basics, IP Subnetting, and Packet Tracer simulations.</p>
-        </div>
-
-        <div class="expertise-card glass-card">
-          <div class="icon-wrapper"><i class="fas fa-code"></i></div>
-          <h3>Software Development</h3>
-          <p>Proficient in object-oriented programming (Java), basic web development (HTML, CSS, JS), and backend
-            integrations.</p>
-        </div>
-
-        <div class="expertise-card glass-card">
-          <div class="icon-wrapper"><i class="fas fa-server"></i></div>
-          <h3>Systems & Cloud</h3>
-          <p>Familiar with Linux administration, basic server configuration, and cloud computing fundamentals.</p>
-        </div>
-
-        <div class="expertise-card glass-card">
-          <div class="icon-wrapper"><i class="fas fa-tools"></i></div>
-          <h3>Tools & Workflows</h3>
-          <p>Experience using Git/GitHub, VS Code, Cisco Packet Tracer, and modern IDEs for project management.</p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-      <div class="section-header fade-up">
-        <h2 class="section-title">Selected Projects</h2>
-        <div class="line"></div>
-      </div>
-      <div class="projects-container">
-
-        <!-- Project 1 -->
-        <div class="project-card glass-card fade-up">
-          <div class="project-content">
-            <span class="project-category">Final Sem Project</span>
-            <h3 class="project-title">Project ENIX</h3>
-            <p class="project-desc">
-              Designed a comprehensive network simulation using Cisco Packet Tracer (VLANs, firewalls, routers,
-              switches) and developed the corresponding web application to demonstrate full-stack integration.
+          <div class="about-text reveal-right">
+            <p>
+              I'm a Higher National Diploma in Information Technology (HNDIT) undergraduate at
+              <strong>SLIATE, Dehiwala</strong>, with a strong foundation in both
+              <strong>Network Engineering</strong> and <strong>Software Development</strong>.
+              I'm currently focused on routing, switching, VLAN configuration, network troubleshooting,
+              and Cisco technologies — working toward a career as a Network Security Engineer.
             </p>
-            <div class="tech-stack">
-              <span>Spring Boot</span>
-              <span>MySQL</span>
-              <span>Packet Tracer</span>
-            </div>
-          </div>
-          <a href="https://github.com/suneththivanka128/ENIX" class="project-link"><i
-              class="fas fa-arrow-right"></i></a>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project-card glass-card fade-up delay-1">
-          <div class="project-content">
-            <span class="project-category">Vibe Coding</span>
-            <h3 class="project-title">Torrivex-v1.0 Downloader</h3>
-            <p class="project-desc">
-              Developed a high-performance media downloader and converter integrating yt-dlp, aria2c, and ffmpeg for
-              robust video/audio torrenting and FTP downloads.
+            <p>
+              Alongside networking, I build full-stack applications with Java, Spring Boot, and modern
+              web technologies, which lets me understand systems from the cable to the code.
+              I pick things up fast, enjoy solving hands-on problems, and work well in
+              multidisciplinary teams.
             </p>
-            <div class="tech-stack">
-              <span>Spring Boot</span>
-              <span>yt-dlp</span>
-              <span>aria2c</span>
+
+            <div class="about-stats">
+              <div class="stat-box">
+                <span style="display: block; font-size: 0.75rem; color: var(--text-dim); margin-bottom: -4px;">Up
+                  to</span>
+                <span class="stat-num" data-count="3.5" data-decimal="1">0</span>
+                <span class="stat-label">GPA / 4.0</span>
+              </div>
+              <div class="stat-box">
+                <span style="display: block; font-size: 0.75rem; color: var(--text-dim); margin-bottom: -4px;">Up
+                  to</span>
+                <span class="stat-num" data-count="13">0</span>
+                <span class="stat-label">Certifications</span>
+              </div>
+              <div class="stat-box">
+                <span style="display: block; font-size: 0.75rem; color: var(--text-dim); margin-bottom: -4px;">Up
+                  to</span>
+                <span class="stat-num" data-count="10">0</span>
+                <span class="stat-label">Projects Built</span>
+              </div>
+              <div class="stat-box">
+                <span style="display: block; font-size: 0.75rem; color: var(--text-dim); margin-bottom: -4px;">Up
+                  to</span>
+                <span class="stat-num" data-count="2">0</span>
+                <span class="stat-label">Years IT Experience</span>
+              </div>
+            </div>
+
+            <div class="about-info-grid">
+              <div><i class='bx bx-map'></i> Dehiwala, Sri Lanka</div>
+              <div><i class='bx bx-envelope'></i> stubeywarna@gmail.com</div>
+              <div><i class='bx bx-phone'></i> +94 70 189 1183</div>
+              <div><i class='bx bx-globe'></i> suneththivanka128.github.io</div>
             </div>
           </div>
-          <a href="https://github.com/suneththivanka128/Torrivex-v1.0" class="project-link"><i
-              class="fas fa-arrow-right"></i></a>
         </div>
-
-        <!-- Project 3 -->
-        <div class="project-card glass-card fade-up delay-2">
-          <div class="project-content">
-            <span class="project-category">Vibe Coding</span>
-            <h3 class="project-title">Shop-POS-Mini</h3>
-            <p class="project-desc">
-              Engineered a production-ready, offline-first Bakery POS system designed for high performance with a robust
-              Role-Based Access Control (RBAC) system.
-            </p>
-            <div class="tech-stack">
-              <span>Vanilla JS</span>
-              <span>Tailwind CSS</span>
-              <span>Dexie.js</span>
-            </div>
-          </div>
-          <a href="https://github.com/suneththivanka128/shop-pos-mini" class="project-link"><i
-              class="fas fa-arrow-right"></i></a>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="project-card glass-card fade-up">
-          <div class="project-content">
-            <span class="project-category">2nd Sem Project</span>
-            <h3 class="project-title">Fund Management System</h3>
-            <p class="project-desc">
-              Engineered a fund management system to track and manage financial data efficiently using a robust PHP and
-              MySQL backend.
-            </p>
-            <div class="tech-stack">
-              <span>PHP</span>
-              <span>MySQL</span>
-              <span>JavaScript</span>
-            </div>
-          </div>
-          <a href="https://github.com/suneththivanka128/FundManagementSystem-v2" class="project-link"><i
-              class="fas fa-arrow-right"></i></a>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="project-card glass-card fade-up delay-1">
-          <div class="project-content">
-            <span class="project-category">1st Sem Project</span>
-            <h3 class="project-title">Bakery Showcase</h3>
-            <p class="project-desc">
-              Developed a bakery showcase website featuring a product catalog and a functional contact form that saves
-              customer messages directly to a database.
-            </p>
-            <div class="tech-stack">
-              <span>HTML/CSS</span>
-              <span>PHP</span>
-              <span>MySQL</span>
-            </div>
-          </div>
-          <a href="https://github.com/suneththivanka128/CakeWebsite" class="project-link"><i
-              class="fas fa-arrow-right"></i></a>
-        </div>
-
       </div>
     </section>
 
-    <!-- Credentials Section -->
-    <section id="credentials" class="section">
-      <div class="section-header fade-up">
-        <h2 class="section-title">Credentials</h2>
-        <div class="line"></div>
-      </div>
+    <!-- SKILLS -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <p class="section-tag reveal-up">What I Work With</p>
+        <h2 class="section-title reveal-up">Technical Skills</h2>
 
-      <div class="credentials-notice fade-up">
-        <p><i class="fab fa-linkedin"></i> For certificate verification and full credential history, please visit my <a
-            href="https://www.linkedin.com/in/suneth-thiwanka-ubeywarna" target="_blank" class="inline-link">LinkedIn
-            Profile</a>.</p>
-      </div>
+        <div class="skills-grid">
 
-      <div class="credentials-grid fade-up delay-1">
-
-        <!-- Education -->
-        <div class="cred-column">
-          <h3 class="cred-title"><i class="fas fa-graduation-cap"></i> Education</h3>
-          <div class="cred-list">
-            <div class="cred-item glass-card">
-              <h4>Higher National Diploma in Information Technology (HNDIT)</h4>
-              <p>SLIATE - Dehiwala &bull; Currently Reading</p>
-            </div>
-            <div class="cred-item glass-card">
-              <h4>Computer Hardware (NVQ 3 & 4)</h4>
-              <p>Department of Technical Education & Training &bull; Completed</p>
-            </div>
-            <div class="cred-item glass-card">
-              <h4>G.C.E. Advanced Level</h4>
-              <p>Successfully Completed</p>
+          <div class="skill-card reveal-up">
+            <div class="skill-icon"><i class='bx bx-sitemap'></i></div>
+            <h3>Networking</h3>
+            <div class="chip-row">
+              <span class="chip">TCP/IP</span><span class="chip">Subnetting</span><span class="chip">OSI Model</span>
+              <span class="chip">OSPF</span><span class="chip">EIGRP</span><span class="chip">BGP Basics</span>
+              <span class="chip">VLAN</span><span class="chip">STP</span><span class="chip">ACL</span>
+              <span class="chip">NAT</span><span class="chip">DHCP</span><span class="chip">DNS</span><span
+                class="chip">VPN</span>
             </div>
           </div>
-        </div>
 
-        <!-- Certifications & Training -->
-        <div class="cred-column">
-          <h3 class="cred-title"><i class="fas fa-certificate"></i> Certifications & Training</h3>
-          <div class="cred-list">
-            <div class="cred-item glass-card">
-              <h4>CCNP Enterprise: Core Networking</h4>
-              <p>Cisco &bull; Completed</p>
-              <!-- <a href="#" class="cert-link">Verify <i class="fas fa-external-link-alt"></i></a> -->
-            </div>
-            <div class="cred-item glass-card">
-              <h4>CCNA: Enterprise, Switching & Intro to Networks</h4>
-              <p>Cisco &bull; Completed (3 Modules)</p>
-              <!-- <a href="#" class="cert-link">Verify <i class="fas fa-external-link-alt"></i></a> -->
-            </div>
-            <div class="cred-item glass-card">
-              <h4>Ethical Hacker</h4>
-              <p>Cisco &bull; In Progress</p>
-              <!-- <a href="#" class="cert-link">Verify <i class="fas fa-external-link-alt"></i></a> -->
-            </div>
-            <div class="cred-item glass-card">
-              <h4>Industrial Networking & IT Essentials</h4>
-              <p>Cisco &bull; Completed</p>
-              <!-- <a href="#" class="cert-link">Verify <i class="fas fa-external-link-alt"></i></a> -->
-            </div>
-            <div class="cred-item glass-card">
-              <h4>Network Technician Career Path</h4>
-              <p>Cisco &bull; Completed</p>
-              <!-- <a href="#" class="cert-link">Verify <i class="fas fa-external-link-alt"></i></a> -->
-            </div>
-            <div class="cred-item glass-card">
-              <h4>Web Design & UI Design (Figma)</h4>
-              <p>University of Moratuwa / Alison &bull; Completed</p>
-              <!-- <a href="#" class="cert-link">Verify <i class="fas fa-external-link-alt"></i></a> -->
+          <div class="skill-card reveal-up" style="--d:0.1s">
+            <div class="skill-icon"><i class='bx bx-code-alt'></i></div>
+            <h3>Programming</h3>
+            <div class="chip-row">
+              <span class="chip">Java</span><span class="chip">Python</span><span class="chip">SQL</span>
             </div>
           </div>
-        </div>
 
+          <div class="skill-card reveal-up" style="--d:0.2s">
+            <div class="skill-icon"><i class='bx bx-cloud'></i></div>
+            <h3>Web &amp; Cloud</h3>
+            <div class="chip-row">
+              <span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript</span>
+              <span class="chip">Spring Boot</span><span class="chip">AWS Fundamentals</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal-up" style="--d:0.3s">
+            <div class="skill-icon"><i class='bx bxl-windows'></i></div>
+            <h3>Operating Systems</h3>
+            <div class="chip-row">
+              <span class="chip">Windows Server</span><span class="chip">Ubuntu</span><span class="chip">CentOS</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal-up" style="--d:0.4s">
+            <div class="skill-icon"><i class='bx bx-wrench'></i></div>
+            <h3>Tools</h3>
+            <div class="chip-row">
+              <span class="chip">Cisco Packet Tracer</span><span class="chip">GNS3</span><span class="chip">Git</span>
+              <span class="chip">GitHub</span><span class="chip">Postman</span><span class="chip">VS Code</span>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-      <div class="contact-container glass-card fade-up">
-        <div class="contact-info">
-          <h2 class="section-title">Let's Connect</h2>
-          <p>I'm currently seeking internship opportunities in Network Engineering and Software Development. Feel free
-            to reach out!</p>
+    <!-- EXPERIENCE / EDUCATION -->
+    <section class="section" id="experience">
+      <div class="container">
+        <p class="section-tag reveal-up">My Journey</p>
+        <h2 class="section-title reveal-up">Experience &amp; Education</h2>
 
-          <div class="social-links">
-            <a href="mailto:stubeywarna@gmail.com" class="social-btn"><i class="fas fa-envelope"></i>
-              stubeywarna@gmail.com</a>
-            <a href="https://www.linkedin.com/in/suneth-thiwanka-ubeywarna" class="social-btn" target="_blank"><i
-                class="fab fa-linkedin-in"></i> LinkedIn</a>
-            <a href="https://github.com/suneththivanka128" class="social-btn" target="_blank"><i
-                class="fab fa-github"></i> GitHub</a>
+        <div class="timeline">
+
+          <div class="timeline-item reveal-up">
+            <div class="timeline-dot"><i class='bx bxs-graduation'></i></div>
+            <div class="timeline-card">
+              <span class="timeline-date">2024 – Present</span>
+              <h3>Higher National Diploma in Information Technology</h3>
+              <p class="timeline-org">SLIATE, Dehiwala, Sri Lanka</p>
+              <ul>
+                <li>Core Modules: Networking, Network Security, Object-Oriented Programming, Database Management, Web
+                  Application Development, Systems Analysis and Design.</li>
+                <li>Current GPA: Upto 3.5 / 4.0</li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="contact-form-wrapper">
-          <form id="contact-form" class="modern-form" action="https://formspree.io/f/xzdoleed" method="POST">
-            <div class="form-group">
-              <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+          <div class="timeline-item reveal-up" style="--d:0.1s">
+            <div class="timeline-dot"><i class='bx bx-briefcase'></i></div>
+            <div class="timeline-card">
+              <span class="timeline-date">Sep 2022 – Sep 2024</span>
+              <h3>Graphic Designer &amp; IT Support</h3>
+              <p class="timeline-org">Thihagoda Studio, Sooriyawewa, Sri Lanka</p>
+              <ul>
+                <li>Diagnosed and resolved computer hardware and LAN issues, ensuring minimal downtime for daily
+                  operations.</li>
+                <li>Installed and maintained computers, printers, and network devices for office users.</li>
+                <li>Provided technical support for hardware, software, and network-related issues.</li>
+              </ul>
             </div>
-            <div class="form-group">
-              <input type="email" id="email" name="email" placeholder="Your Email" required>
+          </div>
+
+          <div class="timeline-item reveal-up" style="--d:0.2s">
+            <div class="timeline-dot"><i class='bx bx-chip'></i></div>
+            <div class="timeline-card">
+              <span class="timeline-date">Completed</span>
+              <h3>Computer Hardware (NVQ Level 3 &amp; 4)</h3>
+              <p class="timeline-org">Department of Technical Education &amp; Training</p>
+              <ul>
+                <li>Focus: Hardware troubleshooting, PC assembly, and basic networking infrastructure.</li>
+              </ul>
             </div>
-            <div class="form-group">
-              <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+          </div>
+
+          <div class="timeline-item reveal-up" style="--d:0.3s">
+            <div class="timeline-dot"><i class='bx bx-book-open'></i></div>
+            <div class="timeline-card">
+              <span class="timeline-date">Aug 2021</span>
+              <h3>G.C.E. Advanced Level</h3>
+              <p class="timeline-org">H/Sooriyawewa National School</p>
+              <ul>
+                <li>Stream: Physics / Combined Mathematics / IT — Results: S, S, C</li>
+              </ul>
             </div>
-            <button type="submit" class="btn btn-primary w-100">Send Message <i class="fas fa-paper-plane"></i></button>
-          </form>
+          </div>
+
         </div>
       </div>
     </section>
+
+    <!-- PROJECTS -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <p class="section-tag reveal-up">My Work</p>
+        <h2 class="section-title reveal-up">Selected Projects</h2>
+
+        <div class="projects-grid">
+
+          <article class="project-card reveal-up">
+            <div class="project-glow"></div>
+            <div class="project-icon"><i class='bx bx-network-chart'></i></div>
+            <h3>Project ENIX</h3>
+            <p class="project-sub">Network Simulation &amp; Web Application</p>
+            <div class="chip-row">
+              <span class="chip">Packet Tracer</span><span class="chip">Spring Boot</span><span
+                class="chip">MySQL</span>
+            </div>
+            <ul>
+              <li>Designed a network topology using VLANs, routers, switches, and firewalls.</li>
+              <li>Developed a web application integrated with the simulated network environment.</li>
+            </ul>
+            <a href="https://github.com/suneththivanka128" target="_blank" rel="noopener" class="project-link">
+              <i class='bx bxl-github'></i> View on GitHub
+            </a>
+          </article>
+
+          <article class="project-card reveal-up" style="--d:0.1s">
+            <div class="project-glow"></div>
+            <div class="project-icon"><i class='bx bx-wallet'></i></div>
+            <h3>FundManagementSystem-v2</h3>
+            <p class="project-sub">Financial Data Management System</p>
+            <div class="chip-row">
+              <span class="chip">PHP</span><span class="chip">JavaScript</span><span class="chip">MySQL</span>
+            </div>
+            <ul>
+              <li>Engineered a fund management system to track and manage financial data efficiently.</li>
+              <li>Built robust backend processing and database logic for reliable record-keeping.</li>
+            </ul>
+            <a href="https://github.com/suneththivanka128" target="_blank" rel="noopener" class="project-link">
+              <i class='bx bxl-github'></i> View on GitHub
+            </a>
+          </article>
+
+          <article class="project-card reveal-up" style="--d:0.2s">
+            <div class="project-glow"></div>
+            <div class="project-icon"><i class='bx bx-download'></i></div>
+            <h3>Torrivex v1.0</h3>
+            <p class="project-sub">Media Downloader &amp; Converter</p>
+            <div class="chip-row">
+              <span class="chip">Spring Boot</span><span class="chip">yt-dlp</span><span class="chip">ffmpeg</span>
+            </div>
+            <ul>
+              <li>Built a high-performance media downloader and converter application.</li>
+              <li>Integrated video/audio torrenting, FTP downloads, and media conversion pipelines.</li>
+            </ul>
+            <a href="https://github.com/suneththivanka128" target="_blank" rel="noopener" class="project-link">
+              <i class='bx bxl-github'></i> View on GitHub
+            </a>
+          </article>
+
+          <article class="project-card reveal-up" style="--d:0.3s">
+            <div class="project-glow"></div>
+            <div class="project-icon"><i class='bx bx-store'></i></div>
+            <h3>Shop-POS-Mini</h3>
+            <p class="project-sub">Offline-First Bakery POS System</p>
+            <div class="chip-row">
+              <span class="chip">Vanilla JS</span><span class="chip">Tailwind CSS</span><span
+                class="chip">Dexie.js</span>
+            </div>
+            <ul>
+              <li>Engineered a production-ready, offline-first POS system for high performance.</li>
+              <li>Implemented Role-Based Access Control (RBAC) for secure multi-user access.</li>
+            </ul>
+            <a href="https://github.com/suneththivanka128" target="_blank" rel="noopener" class="project-link">
+              <i class='bx bxl-github'></i> View on GitHub
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="section" id="certifications">
+      <div class="container">
+        <p class="section-tag reveal-up">Verified Learning</p>
+        <h2 class="section-title reveal-up">Certifications &amp; Training</h2>
+
+        <div class="certs-grid">
+          <div class="cert-card reveal-up"><i class='bx bxs-badge-check'></i><span>CCNP Enterprise: Core
+              Networking</span></div>
+          <div class="cert-card reveal-up" style="--d:0.05s"><i class='bx bxs-badge-check'></i><span>CCNA: Enterprise
+              Networking, Security &amp; Automation</span></div>
+          <div class="cert-card reveal-up" style="--d:0.1s"><i class='bx bxs-badge-check'></i><span>CCNA: Switching,
+              Routing &amp; Wireless Essentials</span></div>
+          <div class="cert-card reveal-up" style="--d:0.15s"><i class='bx bxs-badge-check'></i><span>CCNA: Introduction
+              to Networks</span></div>
+          <div class="cert-card reveal-up" style="--d:0.2s"><i class='bx bx-loader-circle'></i><span>Ethical Hacker
+              <em>(In Progress)</em></span></div>
+          <div class="cert-card reveal-up" style="--d:0.25s"><i class='bx bxs-badge-check'></i><span>Industrial
+              Networking Essentials</span></div>
+          <div class="cert-card reveal-up" style="--d:0.3s"><i class='bx bxs-badge-check'></i><span>Network Technician
+              Career Path</span></div>
+          <div class="cert-card reveal-up" style="--d:0.35s"><i class='bx bxs-badge-check'></i><span>IT
+              Essentials</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <p class="section-tag reveal-up">Let's Connect</p>
+        <h2 class="section-title reveal-up">Get In Touch</h2>
+        <p class="contact-intro reveal-up">
+          Looking for a Network Security Engineer intern who's genuinely curious and shows up ready to learn?
+          I'd love to hear from you.
+        </p>
+
+        <div class="contact-grid">
+          <a href="mailto:stubeywarna@gmail.com" class="contact-card reveal-up">
+            <i class='bx bx-envelope'></i>
+            <h3>Email</h3>
+            <span>stubeywarna@gmail.com</span>
+          </a>
+          <a href="tel:+94701891183" class="contact-card reveal-up" style="--d:0.1s">
+            <i class='bx bx-phone'></i>
+            <h3>Phone</h3>
+            <span>+94 70 189 1183</span>
+          </a>
+          <a href="https://linkedin.com/in/suneth-thiwanka-ubeywarna" target="_blank" rel="noopener"
+            class="contact-card reveal-up" style="--d:0.2s">
+            <i class='bx bxl-linkedin-square'></i>
+            <h3>LinkedIn</h3>
+            <span>suneth-thiwanka-ubeywarna</span>
+          </a>
+          <a href="https://github.com/suneththivanka128" target="_blank" rel="noopener" class="contact-card reveal-up"
+            style="--d:0.3s">
+            <i class='bx bxl-github'></i>
+            <h3>GitHub</h3>
+            <span>@suneththivanka128</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2026 Suneth Thiwanka Ubeywarna. All rights reserved.</p>
-      <p class="built-with">Built with <i class="fas fa-heart"></i> in Sri Lanka</p>
-    </div>
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Suneth Thiwanka Ubeywarna. Built with <i class='bx bxs-heart'></i> and vanilla
+      code.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class='bx bx-up-arrow-alt'></i>
+  </button>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>
